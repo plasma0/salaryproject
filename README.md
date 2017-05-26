@@ -1,1 +1,2 @@
 # salaryproject
+Programowanie systemów mobilnych
