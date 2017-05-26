@@ -1,4 +1,4 @@
-# chatspa
+# salaryproject
 
 ## Opis projektu
 Aplikacja pozwala na zdobycie różnych informacji na temat naszego wynagrodzenia.
