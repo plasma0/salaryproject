@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="krakow.uek.wynagrodzenieapp.SredniaKrajowa">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/kwotaTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/kwotaTextView"
+        android:paddingTop="16dp"
+        android:text="Porównywanie wysokości wynagrodzenia do średniej krajowej"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/kwotaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:text="Kwota(netto):"
+        android:layout_alignBaseline="@+id/kwotaEditText"
+        android:layout_alignBottom="@+id/kwotaEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/kwotaEditText"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/porownajButton"
+        android:layout_alignStart="@+id/porownajButton"
+        android:layout_marginTop="13dp" />
+
+    <Button
+        android:text="Porównaj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/porownajButton"
+        android:onClick="porownaj"
+        android:layout_below="@+id/kwotaEditText"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/aktualWynagTextView"
+        android:layout_below="@+id/porownajButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:id="@+id/znajdujeszSieTextView"
+        android:layout_below="@+id/aktualWynagTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
