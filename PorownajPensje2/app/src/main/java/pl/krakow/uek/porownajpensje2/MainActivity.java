@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         new WebT().execute(2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38);
+        String[] voivod = {"dolnośląskie","kujawsko-pomorskie","lubelskie","lubuskie","łódzkie","małopolskie","mazowieckie","opolskie","podkarpackie","podlaskie","pomorskie","śląskie","świętokrzyskie","warmińsko-mazurskie","wielkopolskie","zachodnio-pomorskie"};
+        ArrayAdapter<String> voi = new ArrayAdapter<String>(getBaseContext(),R.layout.support_simple_spinner_dropdown_item,voivod);
+        ((Spinner)findViewById(R.id.spinner2)).setAdapter(voi);
     }
 
     public void calculate(View view) {
@@ -37,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor SPe = SP.edit();
         SPe.putString("SELECT",selection);
         SPe.putInt("SALARY",salary);
+        String viovodeship = ((Spinner)findViewById(R.id.spinner2)).getSelectedItem().toString();
+        SPe.putString("VOIV",viovodeship);
         SPe.commit();
         Intent i = new Intent(this,Results.class);
         startActivity(i);
