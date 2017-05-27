@@ -58,5 +58,36 @@ public class ZawodyResults extends AppCompatActivity {
         String cM = cmore.toString().substring(0,4)+"%";
         ((TextView)findViewById(R.id.textView5)).setText(cL);
         ((TextView)findViewById(R.id.textView6)).setText(cM);
+
+        String voivodeship = SP.getString("VOIV","");
+        Double vmean;
+        switch (voivodeship)
+        {
+            case "dolnośląskie":vmean=3192.58;break;
+            case "kujawsko-pomorskie":vmean=2749.95;break;
+            case "lubelskie":vmean=2811.04;break;
+            case "lubuskie":vmean=2735.24;break;
+            case "łódzkie":vmean=2861.38;break;
+            case "małopolskie":vmean=3213.92;break;
+            case "mazowieckie":vmean=3914.48;break;
+            case "opolskie":vmean=2948.52;break;
+            case "podkarpackie":vmean=2688.07;break;
+            case "podlaskie":vmean=2708.63;break;
+            case "pomorskie":vmean=3352.19;break;
+            case "śląskie":vmean=3343.76;break;
+            case "świętokrzyskie":vmean=2729.18;break;
+            case "warmińsko-mazurskie":vmean=2594.63;break;
+            case "wielkopolskie":vmean=2935.61;break;
+            case "zachodniopomorskie":vmean=2948.52;break;
+            default:vmean=0.0;break;
+        }
+        Double vless = calculateSub(ds,2,vmean);
+        Double vmore = 1 - vless;
+        vless = vless * 100;
+        vmore = vmore * 100;
+        String vL = vless.toString().substring(0,4)+"%";
+        String vM = vmore.toString().substring(0,4)+"%";
+        ((TextView)findViewById(R.id.textView10)).setText(vL);
+        ((TextView)findViewById(R.id.textView11)).setText(vM);
     }
 }

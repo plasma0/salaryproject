@@ -16,10 +16,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/numx"
-        app:layout_constraintVertical_bias="0.461" />
+        app:layout_constraintHorizontal_bias="0.504" />
 
     <TextView
         android:id="@+id/numx"
@@ -29,9 +26,8 @@
         android:textSize="45sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView5"
-        android:layout_marginTop="32dp"
-        app:layout_constraintHorizontal_bias="0.502" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp" />
 
     <Button
         android:id="@+id/button5"
@@ -61,7 +57,7 @@
         android:id="@+id/calc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="22dp"
         android:onClick="calculate"
         android:text="Przelicz"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -69,48 +65,74 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="180dp"
+        android:layout_width="383dp"
+        android:layout_height="265dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button6"
-        app:layout_constraintVertical_bias="0.022"
-        android:id="@+id/linearLayout2">
+        app:layout_constraintVertical_bias="0.087"
+        android:id="@+id/linearLayout2"
+        tools:layout_editor_absoluteY="139dp"
+        tools:layout_editor_absoluteX="0dp">
 
         <EditText
             android:id="@+id/editText9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number|numberSigned|numberDecimal"
-            android:text="0" />
+            android:hint="Kwota"
+            android:inputType="number|numberSigned|numberDecimal" />
 
         <EditText
             android:id="@+id/editText8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName|number|numberSigned|numberDecimal"
-            android:text="0" />
+            android:hint="Kwota"
+            android:inputType="textPersonName|number|numberSigned|numberDecimal" />
 
         <EditText
             android:id="@+id/editText7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName|number|numberSigned|numberDecimal"
-            android:text="0" />
+            android:hint="Kwota"
+            android:inputType="textPersonName|number|numberSigned|numberDecimal" />
 
         <EditText
             android:id="@+id/editText6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName|number|numberSigned|numberDecimal"
+            android:hint="Kwota"
+            android:inputType="textPersonName|number|numberSigned|numberDecimal" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Kwota"
+            android:inputType="number|numberSigned|numberDecimal" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Kwota"
+            android:inputType="number|numberSigned|numberDecimal" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number|numberSigned|numberDecimal"
             android:text="0" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
