@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="krakow.uek.wynagrodzenieapp.MainActivity">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <Button
+            android:id="@+id/zawodyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="zawodyClick"
+            android:text="Porównaj do zawodów" />
+
+        <Button
+            android:id="@+id/krajeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="krajeClick"
+            android:text="Porównaj do krajów" />
+
+        <Button
+            android:id="@+id/srKrajButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="sredniaKrajowaClick"
+            android:text="Porównaj do średniej krajowej" />
+
+        <Button
+            android:id="@+id/przeliczanieButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="przeliczanieClick"
+            android:text="Przeliczanie wysokości wynagrodzenia" />
+
+        <Button
+            android:id="@+id/wydatkiButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="wydatkiClick"
+            android:text="Odliczenie wydatków" />
+
+        <Button
+            android:id="@+id/oszczedzanieButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="oszczedzanieClick"
+            android:text="Oszczędzanie" />
+
+        <Button
+            android:id="@+id/obliczanieButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="obliczanieClick"
+            android:text="Obliczanie dochodu na członka rodziny" />
+
+        <Button
+            android:id="@+id/aboutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="aboutClick"
+            android:text="Informacje o aplikacji" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

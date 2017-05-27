@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="krakow.uek.wynagrodzenieapp.PrzeliczanieWynagrodzenia">
+
+    <TextView
+        android:id="@+id/typUmowyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:paddingTop="10dp"
+        android:text="Wybierz typ umowy" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/radioGroup3"
+        android:layout_alignLeft="@+id/nettoEditText"
+        android:layout_alignStart="@+id/nettoEditText">
+
+        <RadioButton
+            android:text="Zlecenie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/zlecenieRadioButton"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="O dzieło"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dzieloRadioButton"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="O pracę"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/praceRadioButton"
+            android:layout_weight="1" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/wybierzKwotaDoObliczTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:paddingTop="10dp"
+        android:text="Wybierz podawaną kwotę" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_alignTop="@+id/radioGroup"
+        android:layout_alignLeft="@+id/wybierzKwotaDoObliczTextView"
+        android:layout_alignStart="@+id/wybierzKwotaDoObliczTextView"
+        android:id="@+id/radioGroup3">
+
+        <RadioButton
+            android:text="Netto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nettoRadioButton"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="Brutto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bruttoRadioButton"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="Koszt pracodawcy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/kosztRadioButton"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/kwotaEditText"
+        android:layout_marginTop="150dp"
+        android:layout_below="@+id/radioGroup2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Wprowadź kwote:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/kwotaTextView"
+        android:layout_alignBaseline="@+id/kwotaEditText"
+        android:layout_alignBottom="@+id/kwotaEditText"
+        android:layout_alignLeft="@+id/typUmowyTextView"
+        android:layout_alignStart="@+id/typUmowyTextView" />
+
+    <Button
+        android:text="Oblicz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/obliczButton"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/kwotaEditText"
+        android:layout_centerHorizontal="true"
+        android:onClick="oblicz" />
+
+    <TextView
+        android:text="Wyniki kalkulacji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/obliczButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:id="@+id/wynikiTextView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/nettoEditText"
+        android:layout_alignBaseline="@+id/nettoTextView"
+        android:layout_alignBottom="@+id/nettoTextView"
+        android:layout_alignRight="@+id/wynikiTextView"
+        android:layout_alignEnd="@+id/wynikiTextView"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/bruttoEditText"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_alignBottom="@+id/bruttoTextView"
+        android:layout_alignLeft="@+id/nettoEditText"
+        android:layout_alignStart="@+id/nettoEditText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/kosztEditText"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_alignBaseline="@+id/kosztTextView"
+        android:layout_alignBottom="@+id/kosztTextView"
+        android:layout_alignLeft="@+id/nettoEditText"
+        android:layout_alignStart="@+id/nettoEditText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bruttoTextView"
+        android:layout_marginTop="38dp"
+        android:text="Brutto"
+        android:layout_below="@+id/nettoEditText"
+        android:layout_alignLeft="@+id/kosztTextView"
+        android:layout_alignStart="@+id/kosztTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nettoTextView"
+        android:layout_marginTop="50dp"
+        android:text="Netto"
+        android:layout_below="@+id/wynikiTextView"
+        android:layout_alignLeft="@+id/bruttoTextView"
+        android:layout_alignStart="@+id/bruttoTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/kosztTextView"
+        android:text="Koszt pracodawcy"
+        android:layout_below="@+id/bruttoEditText"
+        android:layout_alignRight="@+id/wybierzKwotaDoObliczTextView"
+        android:layout_alignEnd="@+id/wybierzKwotaDoObliczTextView"
+        android:layout_marginTop="30dp" />
+
+</RelativeLayout>
