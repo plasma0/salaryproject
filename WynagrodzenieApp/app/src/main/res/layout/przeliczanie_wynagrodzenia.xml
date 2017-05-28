@@ -16,8 +16,9 @@
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
         android:paddingTop="10dp"
+        android:scrollHorizontally="true"
         android:text="Wybierz typ umowy"
-        android:textSize="17sp" />
+        android:textSize="16sp" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -60,7 +61,7 @@
         android:layout_marginRight="12dp"
         android:paddingTop="10dp"
         android:text="Wybierz podawaną kwotę"
-        android:textSize="17sp" />
+        android:textSize="16sp" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -110,12 +111,12 @@
         android:id="@+id/kwotaTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wprowadź kwote:"
-        android:textSize="20sp"
         android:layout_alignBaseline="@+id/kwotaEditText"
         android:layout_alignBottom="@+id/kwotaEditText"
+        android:layout_alignEnd="@+id/typUmowyTextView"
         android:layout_alignRight="@+id/typUmowyTextView"
-        android:layout_alignEnd="@+id/typUmowyTextView" />
+        android:text="Wprowadź kwote:"
+        android:textSize="17sp" />
 
     <Button
         android:id="@+id/obliczButton"
@@ -190,7 +191,9 @@
         android:layout_alignBaseline="@+id/kosztTextView"
         android:layout_alignBottom="@+id/kosztTextView"
         android:layout_alignLeft="@+id/nettoEditText"
-        android:layout_alignStart="@+id/nettoEditText" />
+        android:layout_alignStart="@+id/nettoEditText"
+        android:layout_toLeftOf="@+id/kosztTextView"
+        android:layout_toStartOf="@+id/kosztTextView" />
 
     <TextView
         android:id="@+id/bruttoTextView"
