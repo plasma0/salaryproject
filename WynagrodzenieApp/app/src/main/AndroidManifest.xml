@@ -8,7 +8,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Porównanie do krajów"
+        android:label="Wynagrodzenie"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -21,15 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Kraje" />
-        <activity android:name=".SredniaKrajowa" />
-        <activity android:name=".PrzeliczanieWynagrodzenia" />
-        <activity android:name=".OdliczenieWydatkow" />
-        <activity android:name=".Oszczedzanie" />
-        <activity android:name=".Obliczanie" />
-        <activity android:name=".ObliczanieSummary" />
-        <activity android:name=".Zawody" />
-        <activity android:name=".ZawodyResults"></activity>
+        <activity android:name=".Zawody" android:label="Porównanie wynagrodzenia" />
+        <activity android:name=".ZawodyResults" android:label="Porównanie wynagrodzenia" />
+        <activity android:name=".Kraje" android:label="Porównanie wynagrodzenia" />
+        <activity android:name=".SredniaKrajowa" android:label="Porównanie wynagrodzenia"/>
+        <activity android:name=".PrzeliczanieWynagrodzenia" android:label="Przeliczanie na podstawie umowy" />
+        <activity android:name=".OdliczenieWydatkow" android:label="Kwota po odjęciu wydatków"/>
+        <activity android:name=".Oszczedzanie" android:label="Oszczędzanie na dany cel"/>
+        <activity android:name=".Obliczanie" android:label="Obliczanie dochodu na osobe"/>
+        <activity android:name=".ObliczanieSummary" android:label="Obliczanie dochodu na osobe"/>
     </application>
 
 </manifest>

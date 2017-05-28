@@ -8,6 +8,7 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -37,7 +38,8 @@ public class SredniaKrajowa extends AppCompatActivity
 
     public void porownaj(View view)
     {
-        new MyTask().execute();
+        if(kwotaEditText.getText().toString().matches("")) Toast.makeText(getApplicationContext(), "Podaj wysokość wynagrodzenia", Toast.LENGTH_LONG).show();
+        else new MyTask().execute();
     }
 
     private class MyTask extends AsyncTask<Void, Void, ArrayList<String> > //params, progress, result
@@ -91,12 +93,15 @@ public class SredniaKrajowa extends AppCompatActivity
                     plKurs = pl.replaceAll("[^\\d.]", "");
                     plKursD = Double.parseDouble(plKurs);
                     wynagrD = Double.parseDouble(kwotaEditText.getText().toString());
+                    znajdujeszSieTextView.setText("");
+                    aktualWynagTextView.setText("");
 
-                    aktualWynagTextView.append("Srednie wynagrodzenie wynosi " + plKurs);
+                    aktualWynagTextView.append("Srednie wynagrodzenie netto wynosi " + plKurs);
 
-                    if (wynagrD > plKursD) znajdujeszSieTextView.append("Znajdujesz sie powyzej sredniej krajowej");
-                    else if(wynagrD < plKursD) znajdujeszSieTextView.append("Znajdujesz sie ponizej sredniej krajowej");
-                    else if(wynagrD == plKursD) znajdujeszSieTextView.append("Znajdujesz sie na rowni ze srednia krajowa");
+
+                    if (wynagrD > plKursD) znajdujeszSieTextView.append("Znajdujesz sie powyżej sredniej krajowej");
+                    else if(wynagrD < plKursD) znajdujeszSieTextView.append("Znajdujesz sie poniżej sredniej krajowej");
+                    else if(wynagrD == plKursD) znajdujeszSieTextView.append("Znajdujesz sie na równi ze średnią krajową");
                 }
             }
         }

@@ -39,7 +39,8 @@
         android:onClick="deleter"
         android:text="-"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numx" />
+        app:layout_constraintTop_toBottomOf="@+id/numx"
+        android:background="@drawable/button_blue" style="@style/ButtonText"/>
 
     <Button
         android:id="@+id/button6"
@@ -51,7 +52,8 @@
         android:onClick="adder"
         android:text="+"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numx" />
+        app:layout_constraintTop_toBottomOf="@+id/numx"
+        android:background="@drawable/button_blue" style="@style/ButtonText"/>
 
     <Button
         android:id="@+id/calc"
@@ -62,7 +64,8 @@
         android:text="Przelicz"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        android:background="@drawable/button_blue" style="@style/ButtonText"/>
 
     <LinearLayout
         android:layout_width="383dp"
@@ -85,7 +88,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Kwota"
-            android:inputType="number|numberSigned|numberDecimal" />
+            android:inputType="number|numberSigned|numberDecimal"
+            android:text="0" />
 
         <EditText
             android:id="@+id/editText8"
@@ -93,7 +97,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Kwota"
-            android:inputType="textPersonName|number|numberSigned|numberDecimal" />
+            android:inputType="textPersonName|number|numberSigned|numberDecimal"
+            android:text="0" />
 
         <EditText
             android:id="@+id/editText7"
@@ -101,7 +106,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Kwota"
-            android:inputType="textPersonName|number|numberSigned|numberDecimal" />
+            android:inputType="textPersonName|number|numberSigned|numberDecimal"
+            android:text="0" />
 
         <EditText
             android:id="@+id/editText6"
@@ -109,7 +115,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Kwota"
-            android:inputType="textPersonName|number|numberSigned|numberDecimal" />
+            android:inputType="textPersonName|number|numberSigned|numberDecimal"
+            android:text="0" />
 
         <EditText
             android:id="@+id/editText"
@@ -117,7 +124,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Kwota"
-            android:inputType="number|numberSigned|numberDecimal" />
+            android:inputType="number|numberSigned|numberDecimal"
+            android:text="0" />
 
         <EditText
             android:id="@+id/editText2"
@@ -125,7 +133,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Kwota"
-            android:inputType="number|numberSigned|numberDecimal" />
+            android:inputType="number|numberSigned|numberDecimal"
+            android:text="0" />
 
         <EditText
             android:id="@+id/editText3"

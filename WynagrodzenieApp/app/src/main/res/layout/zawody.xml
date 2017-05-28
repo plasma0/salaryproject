@@ -48,7 +48,8 @@
         android:text="Oblicz"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner2"
+        android:background="@drawable/button_blue" style="@style/ButtonText"/>
 
     <Spinner
         android:id="@+id/spinner2"

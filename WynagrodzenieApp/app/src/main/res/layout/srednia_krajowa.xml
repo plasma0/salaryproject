@@ -15,20 +15,21 @@
         android:layout_alignStart="@+id/kwotaTextView"
         android:paddingTop="16dp"
         android:text="Porównywanie wysokości wynagrodzenia do średniej krajowej"
-        android:textSize="18sp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/kwotaTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
-        android:text="Kwota(netto):"
         android:layout_alignBaseline="@+id/kwotaEditText"
         android:layout_alignBottom="@+id/kwotaEditText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp" />
+        android:layout_marginStart="13dp"
+        android:paddingLeft="6dp"
+        android:text="Kwota(netto):"
+        android:textSize="20sp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -49,24 +50,29 @@
         android:id="@+id/porownajButton"
         android:onClick="porownaj"
         android:layout_below="@+id/kwotaEditText"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_purple" style="@style/ButtonText"/>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:id="@+id/aktualWynagTextView"
-        android:layout_below="@+id/porownajButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:id="@+id/znajdujeszSieTextView"
-        android:layout_below="@+id/aktualWynagTextView"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/porownajButton"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="8dp"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/znajdujeszSieTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/aktualWynagTextView"
+        android:layout_marginTop="21dp"
+        android:paddingLeft="8dp"
+        android:textSize="24sp" />
 
 </RelativeLayout>

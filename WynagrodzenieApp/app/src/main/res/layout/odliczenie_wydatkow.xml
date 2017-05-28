@@ -177,7 +177,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="obliczOszczednosci"
-            android:text="Oblicz oszczędności" />
+            android:text="Oblicz oszczędności"
+            android:background="@drawable/button_purple" style="@style/ButtonText"/>
 
         <EditText
             android:id="@+id/rezultatEditText"

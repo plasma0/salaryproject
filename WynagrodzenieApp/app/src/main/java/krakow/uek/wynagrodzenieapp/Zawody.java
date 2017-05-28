@@ -33,17 +33,18 @@ public class Zawody extends AppCompatActivity
         ((Spinner)findViewById(R.id.spinner2)).setAdapter(voi);
     }
 
-    public void calculate(View view) {
+    public void calculate(View view)
+    {
         String selection = ((Spinner)findViewById(R.id.spinner)).getSelectedItem().toString();
-        int salary = Integer.parseInt(((TextView)findViewById(R.id.editText)).getText().toString());
+        float salary = Float.parseFloat(((TextView)findViewById(R.id.editText)).getText().toString());
         SharedPreferences SP = getSharedPreferences("sprof", Context.MODE_PRIVATE);
         SharedPreferences.Editor SPe = SP.edit();
         SPe.putString("SELECT",selection);
-        SPe.putInt("SALARY",salary);
+        SPe.putFloat("SALARY",salary);
         String viovodeship = ((Spinner)findViewById(R.id.spinner2)).getSelectedItem().toString();
         SPe.putString("VOIV",viovodeship);
         SPe.commit();
-        Intent i = new Intent(this,ZawodyResults.class);
+        Intent i = new Intent(this, ZawodyResults.class);
         startActivity(i);
     }
 

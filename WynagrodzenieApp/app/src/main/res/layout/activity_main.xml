@@ -18,56 +18,70 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="zawodyClick"
-            android:text="Porównaj do zawodów" />
+            android:text="Porównaj do zawodów"
+            android:background="@drawable/button_blue" style="@style/ButtonText"
+
+            />
 
         <Button
             android:id="@+id/krajeButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="krajeClick"
-            android:text="Porównaj do krajów" />
+            android:text="Porównaj do krajów"
+            android:background="@drawable/button_blue" style="@style/ButtonText" />
 
         <Button
             android:id="@+id/srKrajButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="sredniaKrajowaClick"
-            android:text="Porównaj do średniej krajowej" />
+            android:text="Porównaj do średniej krajowej"
+            android:background="@drawable/button_blue" style="@style/ButtonText"/>
 
         <Button
             android:id="@+id/przeliczanieButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="przeliczanieClick"
-            android:text="Przeliczanie wysokości wynagrodzenia" />
+            android:text="Przeliczanie wysokości wynagrodzenia"
+            android:background="@drawable/button_blue" style="@style/ButtonText"/>
 
         <Button
             android:id="@+id/wydatkiButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="wydatkiClick"
-            android:text="Odliczenie wydatków" />
+            android:text="Odliczenie wydatków"
+            android:background="@drawable/button_blue" style="@style/ButtonText"/>
 
         <Button
             android:id="@+id/oszczedzanieButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="oszczedzanieClick"
-            android:text="Oszczędzanie" />
+            android:text="Oszczędzanie"
+            android:background="@drawable/button_blue" style="@style/ButtonText"/>
 
         <Button
             android:id="@+id/obliczanieButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="obliczanieClick"
-            android:text="Obliczanie dochodu na członka rodziny" />
+            android:text="Obliczanie dochodu na członka rodziny"
+            android:background="@drawable/button_blue" style="@style/ButtonText"/>
 
         <Button
             android:id="@+id/aboutButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="aboutClick"
-            android:text="Informacje o aplikacji" />
+            android:text="Informacje o aplikacji"
+            android:theme="@style/Base.AlertDialog.AppCompat"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="353dp"
+            android:background="@drawable/button_purple" style="@style/ButtonText"/>
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -38,7 +38,7 @@ public class ZawodyResults extends AppCompatActivity {
         String selection = SP.getString("SELECT","");
         SharedPreferences PROFS = getSharedPreferences("profs",Context.MODE_PRIVATE);
         int defSalary = PROFS.getInt(selection,0);
-        int salary = SP.getInt("SALARY",0);
+        float salary = SP.getFloat("SALARY",0);
         Double dds = (double)defSalary;
         Double ds = (double)salary;
         Double less = calculateSub(ds,2,dds);

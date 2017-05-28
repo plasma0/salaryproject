@@ -16,7 +16,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
         android:paddingTop="10dp"
-        android:text="Wybierz typ umowy" />
+        android:text="Wybierz typ umowy"
+        android:textSize="17sp" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -58,7 +59,8 @@
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
         android:paddingTop="10dp"
-        android:text="Wybierz podawaną kwotę" />
+        android:text="Wybierz podawaną kwotę"
+        android:textSize="17sp" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -99,37 +101,51 @@
         android:id="@+id/kwotaEditText"
         android:layout_marginTop="150dp"
         android:layout_below="@+id/radioGroup2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignRight="@+id/wybierzKwotaDoObliczTextView"
+        android:layout_alignEnd="@+id/wybierzKwotaDoObliczTextView"
+        android:layout_toRightOf="@+id/kwotaTextView"
+        android:layout_toEndOf="@+id/kwotaTextView" />
 
     <TextView
-        android:text="Wprowadź kwote:"
+        android:id="@+id/kwotaTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/kwotaTextView"
+        android:text="Wprowadź kwote:"
+        android:textSize="20sp"
         android:layout_alignBaseline="@+id/kwotaEditText"
         android:layout_alignBottom="@+id/kwotaEditText"
-        android:layout_alignLeft="@+id/typUmowyTextView"
-        android:layout_alignStart="@+id/typUmowyTextView" />
+        android:layout_alignRight="@+id/typUmowyTextView"
+        android:layout_alignEnd="@+id/typUmowyTextView" />
 
     <Button
-        android:text="Oblicz"
+        android:id="@+id/obliczButton"
+        style="@style/ButtonText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/obliczButton"
-        android:layout_marginTop="12dp"
-        android:layout_below="@+id/kwotaEditText"
-        android:layout_centerHorizontal="true"
-        android:onClick="oblicz" />
+        android:background="@drawable/button_purple"
+        android:onClick="oblicz"
+        android:text="Oblicz"
+        android:layout_below="@+id/textView7"
+        android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="Wyniki kalkulacji"
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kwotaEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/wynikiTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/obliczButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:id="@+id/wynikiTextView" />
+        android:layout_marginTop="13dp"
+        android:gravity="center"
+        android:text="Wyniki kalkulacji"
+        android:textSize="18sp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -137,14 +153,14 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/nettoEditText"
-        android:layout_alignBaseline="@+id/nettoTextView"
-        android:layout_alignBottom="@+id/nettoTextView"
-        android:layout_alignRight="@+id/wynikiTextView"
-        android:layout_alignEnd="@+id/wynikiTextView"
         android:clickable="false"
         android:cursorVisible="false"
         android:focusable="false"
-        android:focusableInTouchMode="false" />
+        android:focusableInTouchMode="false"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/wynikiTextView"
+        android:layout_toLeftOf="@+id/nettoTextView"
+        android:layout_toStartOf="@+id/nettoTextView" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -156,9 +172,10 @@
         android:cursorVisible="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
+        android:layout_alignBaseline="@+id/bruttoTextView"
         android:layout_alignBottom="@+id/bruttoTextView"
-        android:layout_alignLeft="@+id/nettoEditText"
-        android:layout_alignStart="@+id/nettoEditText" />
+        android:layout_toLeftOf="@+id/bruttoTextView"
+        android:layout_toStartOf="@+id/bruttoTextView" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -176,33 +193,36 @@
         android:layout_alignStart="@+id/nettoEditText" />
 
     <TextView
+        android:id="@+id/bruttoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/bruttoTextView"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="25dp"
         android:text="Brutto"
+        android:textSize="18sp"
         android:layout_below="@+id/nettoEditText"
         android:layout_alignLeft="@+id/kosztTextView"
         android:layout_alignStart="@+id/kosztTextView" />
 
     <TextView
+        android:id="@+id/nettoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/nettoTextView"
-        android:layout_marginTop="50dp"
         android:text="Netto"
-        android:layout_below="@+id/wynikiTextView"
-        android:layout_alignLeft="@+id/bruttoTextView"
-        android:layout_alignStart="@+id/bruttoTextView" />
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/nettoEditText"
+        android:layout_alignBottom="@+id/nettoEditText"
+        android:layout_alignRight="@+id/bruttoTextView"
+        android:layout_alignEnd="@+id/bruttoTextView" />
 
     <TextView
+        android:id="@+id/kosztTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/kosztTextView"
-        android:text="Koszt pracodawcy"
-        android:layout_below="@+id/bruttoEditText"
-        android:layout_alignRight="@+id/wybierzKwotaDoObliczTextView"
         android:layout_alignEnd="@+id/wybierzKwotaDoObliczTextView"
-        android:layout_marginTop="30dp" />
+        android:layout_alignRight="@+id/wybierzKwotaDoObliczTextView"
+        android:layout_below="@+id/bruttoEditText"
+        android:layout_marginTop="30dp"
+        android:text="Koszt pracodawcy"
+        android:textSize="18sp" />
 
 </RelativeLayout>
