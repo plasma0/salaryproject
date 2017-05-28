@@ -12,8 +12,6 @@ Aplikacja pozwala na zdobycie różnych informacji na temat naszego wynagrodzeni
 
 ## Funkcje aplikacji
 * Porównywanie wysokości wynagrodzenia do ogólnej średniej krajowej/wojewódzkiej (poniżej, powyżej, na równi ze średnią)
-Aplikacja pobiera przykładowe średnie dla danych zawodów z serwisu pracuj.pl i pozwala wybrać
-
 * Porównywanie wysokości wynagrodzenia do średniej krajowej na podstawie wybranego zawodu (poniżej, powyżej, na równi ze średnią)
 * Porównanie jak wypada nasze wynagrodzenie na tle innych krajów (poniżej, powyżej, na równi ze średnią)
 * Przeliczanie wysokości wynagrodzenia (brutto-netto) na podstawie rodzaju umowy ( o pracę, na zlecenie itp.)
