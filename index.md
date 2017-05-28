@@ -22,3 +22,9 @@ Aplikacja pozwala na zdobycie różnych informacji na temat naszego wynagrodzeni
 
 ## Użyta technologia
 Projekt powstał w oparciu o Android SDK z wykorzystaniem pakietu Android Studio i jezyka Java. Użyta została także biblioteka JSoup.
+
+## Wykorzystane zagadnienia
+W projekcie wykorzystane zostały zagadnienia poznane podczas zajęć. Użyte zostały m.in aktywności, intencje, preferencje, AsyncTask. 
+
+## Zrzuty ekranu
+https://i.imgur.com/TpLlaea.png
