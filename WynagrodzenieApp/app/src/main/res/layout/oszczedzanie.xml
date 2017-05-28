@@ -8,9 +8,9 @@
 
     <LinearLayout
         android:layout_width="365dp"
-        android:layout_height="502dp"
+        android:layout_height="496dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteX="11dp"
         tools:layout_editor_absoluteY="8dp">
 
         <EditText
@@ -39,7 +39,7 @@
 
         <Button
             android:id="@+id/obliczButton"
-            android:layout_width="match_parent"
+            android:layout_width="348dp"
             android:layout_height="wrap_content"
             android:onClick="oblicz"
             android:text="Oblicz"
